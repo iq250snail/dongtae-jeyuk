@@ -120,7 +120,7 @@ export function FooterSection() {
           {/* Divider */}
           <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 border-t border-primary-foreground/10 pt-12 mt-16 lg:mt-20">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <p className="text-2xl font-medium tracking-tight">
+              <div className="text-2xl font-medium tracking-tight">
                 <Link href="/" className="group flex items-center gap-2.5">
                   <Image
                     src="/images/logo.jpg"
@@ -138,7 +138,7 @@ export function FooterSection() {
                     </span>
                   </div>
                 </Link>
-              </p>
+              </div>
               <p className="text-xs text-primary-foreground/50 font-light">
                 © 2025 동태랑 제육. All rights reserved.
               </p>
