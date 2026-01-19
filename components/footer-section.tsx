@@ -52,15 +52,15 @@ export function FooterSection() {
         {/* Map and Info Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left: Map */}
-          <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 space-y-3">
+          <div className="rounded-2xl overflow-hidden border border-primary-foreground/10 hover:opacity-90 transition-opacity cursor-pointer group">
             <a
-              href="https://map.naver.com/p/search/%EB%8F%99%ED%83%9C%EB%9E%91%EC%A0%9C%EC%9C%A1"
+              href="https://map.naver.com/p/search/동태랑제육"
               target="_blank"
               rel="noopener noreferrer"
               className="block aspect-[4/3] w-full rounded-2xl overflow-hidden border border-primary-foreground/10 hover:opacity-90 transition-opacity cursor-pointer group"
             >
               <Image
-                src="/images/location.jpg"
+                src="/images/location.jRpg"
                 alt="[네이버지도] 동태랑 제육"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
