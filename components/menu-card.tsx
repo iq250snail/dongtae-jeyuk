@@ -71,12 +71,6 @@ export function MenuCard({ title, description, price, image, index, note }: Menu
           <p className="text-sm lg:text-base text-muted-foreground leading-relaxed font-light">
             {description}
           </p>
-          <button
-            type="button"
-            className="mt-2 px-5 py-2.5 text-sm font-medium text-foreground border border-border rounded-full hover:bg-secondary hover:border-foreground/20 transition-all duration-300"
-          >
-            자세히 보기
-          </button>
         </div>
       </div>
     </div>

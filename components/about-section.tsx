@@ -54,7 +54,7 @@ export function AboutSection() {
 
             <div className="space-y-6 text-muted-foreground leading-relaxed font-light max-w-2xl mx-auto">
               <p>
-                동태랑 제육은 30년 경력의 어머니 손맛을 그대로 이어받아,
+                동태랑 제육은 20년 경력의 어머니 손맛을 그대로 이어받아,
                 <br className="hidden md:block" />
                 집에서 먹던 그 맛을 정성껏 재현합니다.
               </p>
@@ -73,7 +73,7 @@ export function AboutSection() {
             {/* Highlights */}
             <div className="pt-8 grid grid-cols-3 gap-6 max-w-lg mx-auto">
               <div className="text-center">
-                <p className="text-2xl lg:text-3xl font-medium text-foreground">30년</p>
+                <p className="text-2xl lg:text-3xl font-medium text-foreground">20년</p>
                 <p className="text-xs text-muted-foreground mt-1 tracking-wide">전통의 손맛</p>
               </div>
               <div className="text-center">

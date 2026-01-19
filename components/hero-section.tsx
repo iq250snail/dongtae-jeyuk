@@ -27,7 +27,7 @@ export function HeroSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <div className="space-y-8 lg:space-y-12">
           <p className="text-xs lg:text-sm tracking-[0.3em] uppercase text-muted-foreground">
-            Since 2015
+            Since 2013
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-foreground leading-tight text-balance">
@@ -38,7 +38,7 @@ export function HeroSection() {
 
           <p className="text-base lg:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed font-light">
             매일 아침 정성껏 준비하는 건강한 가정식.
-            <br className="hidden sm:block" />
+            <br />
             어머니의 손맛을 담아 정직하게 요리합니다.
           </p>
 

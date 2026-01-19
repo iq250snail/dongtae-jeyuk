@@ -24,12 +24,21 @@ const mainMenuItems = [
     price: "8,000원",
     image: "/images/baekban.jpg",
   },
+  {
+    title: "청국장",
+    description: "구수하고 진한 청국장 찌개. 발효된 콩의 깊은 맛과 영양이 가득한 건강식으로, 추운 날 몸을 따뜻하게 해줍니다.",
+    price: "8,000원",
+    image: "/images/cheonggukjang.jpg",
+  },
+  {
+    title: "김치찌개",
+    description: "잘 익은 김치와 돼지고기가 어우러진 얼큰한 김치찌개. 한국인의 소울푸드로 언제 먹어도 든든하고 맛있습니다.",
+    price: "9,000원",
+    image: "/images/kimchi-jjigae.jpg",
+  },
 ]
 
-const sideMenuItems = [
-  { title: "청국장", price: "8,000원" },
-  { title: "김치찌개", price: "9,000원" },
-]
+const sideMenuItems: { title: string; price: string }[] = []
 
 const drinkItems = [
   { title: "소주", price: "4,000원" },
@@ -93,33 +102,17 @@ export function MenuSection() {
           ))}
         </div>
 
-        {/* Sub Menu & Drinks */}
+        {/* Drinks & Other Items */}
         <div
           ref={subMenuRef}
           className="mt-20 lg:mt-32 opacity-0 translate-y-6 transition-all duration-700"
         >
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20 max-w-3xl mx-auto">
-            {/* Side Menu */}
-            <div className="space-y-6">
-              <h3 className="text-lg font-medium text-foreground tracking-wide border-b border-border pb-3">
-                추가 메뉴
-              </h3>
-              <ul className="space-y-4">
-                {sideMenuItems.map((item) => (
-                  <li key={item.title} className="flex justify-between items-center">
-                    <span className="text-foreground">{item.title}</span>
-                    <span className="text-muted-foreground font-light">{item.price}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Drinks */}
-            <div className="space-y-6">
-              <h3 className="text-lg font-medium text-foreground tracking-wide border-b border-border pb-3">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-card rounded-2xl border border-border p-8 lg:p-10">
+              <h3 className="text-xl lg:text-2xl font-medium text-foreground tracking-tight mb-8 text-center">
                 주류 및 기타
               </h3>
-              <ul className="space-y-4">
+              <ul className="grid grid-cols-2 gap-x-8 gap-y-5">
                 {drinkItems.map((item) => (
                   <li key={item.title} className="flex justify-between items-center">
                     <span className="text-foreground">{item.title}</span>

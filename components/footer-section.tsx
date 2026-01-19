@@ -49,73 +49,102 @@ export function FooterSection() {
           </h2>
         </div>
 
-        {/* Info Cards */}
-        <div className="grid md:grid-cols-3 gap-8 lg:gap-12 mb-16 lg:mb-20">
-          {/* Location */}
-          <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mx-auto">
-              <MapPin className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-medium">위치</h3>
-            <p className="text-sm text-primary-foreground/70 leading-relaxed font-light">
-              충북 청주시 흥덕구 강내면
-              <br />
-              태성탑연로 435
-            </p>
+        {/* Map and Info Section */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left: Map */}
+          <div className="animate-item rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow duration-500">
+            <a
+              href="https://map.naver.com/p/search/%EB%8F%99%ED%83%9C%EB%9E%91%EC%A0%9C%EC%9C%A1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block aspect-[4/3] w-full rounded-2xl overflow-hidden border border-primary-foreground/10 hover:opacity-90 transition-opacity cursor-pointer group"
+            >
+              <Image
+                src="/images/location.jpg"
+                alt="[네이버지도] 동태랑 제육"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </a>
           </div>
 
-          {/* Hours */}
-          <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mx-auto">
-              <Clock className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-medium">영업시간</h3>
-            <div className="text-sm text-primary-foreground/70 space-y-1 font-light">
-              <p>월요일~토요일 : 8:30 - 21:00</p>
-              <p>일,공휴일 : (휴일)</p>
-              <p className="text-primary-foreground/50">브레이크타임 15:00 - 16:00</p>
-            </div>
-          </div>
+          {/* Right: Info Cards Stacked Vertically */}
+          <div className="flex flex-col gap-8 justify-center">
 
-          {/* Contact */}
-          <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 text-center space-y-4">
-            <div className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center mx-auto">
-              <Phone className="w-5 h-5" />
-            </div>
-            <h3 className="text-lg font-medium">예약 문의</h3>
-            <p className="text-sm text-primary-foreground/70 leading-relaxed font-light">
-              043-236-5802
-              <br />
-              예약은 전화로만 가능합니다
-            </p>
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 border-t border-primary-foreground/10 pt-12">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-2xl font-medium tracking-tight">
-              <Link href="/" className="group flex items-center gap-2.5">
-                <Image
-                  src="/images/logo.jpg"
-                  alt="동태랑 제육 로고"
-                  width={36}
-                  height={36}
-                  className="rounded-full"
-                />
-                <div className="flex items-baseline gap-0.5">
-                  <span className="text-xl lg:text-2xl font-bold tracking-tight text-balance">
-                    동태랑
-                  </span>
-                  <span className="text-xl lg:text-2xl font-bold text-accent">
-                    제육
-                  </span>
+            {/* Contact */}
+            <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5" />
                 </div>
-              </Link>
-            </p>
-            <p className="text-xs text-primary-foreground/50 font-light">
-              © 2025 동태랑 제육. All rights reserved.
-            </p>
+                <h3 className="text-lg font-medium">예약 문의</h3>
+              </div>
+              <div className="text-sm text-primary-foreground/70 leading-relaxed font-light pl-13 space-y-2">
+                <a href="tel:043-236-5802" className="text-xl font-bold text-primary-foreground hover:text-primary-foreground/80 transition-colors block">
+                  043-236-5802
+                </a>
+                <p className="text-sm">
+                  예약은 전화로만 가능합니다
+                </p>
+              </div>
+            </div>
+
+            {/* Hours */}
+            <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-medium">영업시간</h3>
+              </div>
+              <div className="text-sm text-primary-foreground/70 space-y-1 font-light pl-13">
+                <p>월요일~토요일 : 8:30 - 21:00</p>
+                <p>일,공휴일 : (휴일)</p>
+                <p className="text-primary-foreground/50">브레이크타임 15:00 - 16:00</p>
+              </div>
+            </div>
+
+            {/* Location */}
+            <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-medium">위치</h3>
+              </div>
+              <p className="text-sm text-primary-foreground/70 leading-relaxed font-light pl-13">
+                충북 청주시 흥덕구 강내면 태성탑연로 435
+              </p>
+            </div>
+
+          </div>
+
+          {/* Divider */}
+          <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 border-t border-primary-foreground/10 pt-12 mt-16 lg:mt-20">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-2xl font-medium tracking-tight">
+                <Link href="/" className="group flex items-center gap-2.5">
+                  <Image
+                    src="/images/logo.jpg"
+                    alt="동태랑 제육 로고"
+                    width={36}
+                    height={36}
+                    className="rounded-full"
+                  />
+                  <div className="flex items-baseline gap-0.5">
+                    <span className="text-xl lg:text-2xl font-bold tracking-tight text-balance">
+                      동태랑
+                    </span>
+                    <span className="text-xl lg:text-2xl font-bold text-accent">
+                      제육
+                    </span>
+                  </div>
+                </Link>
+              </p>
+              <p className="text-xs text-primary-foreground/50 font-light">
+                © 2025 동태랑 제육. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>
