@@ -17,11 +17,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-md border-b border-border"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? "bg-background/80 backdrop-blur-md border-b border-border"
+        : "bg-transparent"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
@@ -37,7 +36,7 @@ export function Navigation() {
               <span className="text-xl lg:text-2xl font-bold tracking-tight text-foreground">
                 동태랑
               </span>
-              <span className="text-lg lg:text-xl font-medium text-accent">
+              <span className="text-xl lg:text-2xl font-bold text-accent">
                 제육
               </span>
             </div>

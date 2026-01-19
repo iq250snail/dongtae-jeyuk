@@ -6,24 +6,6 @@ import Image from "next/image"
 export function HeroSection() {
   const heroRef = useRef<HTMLElement>(null)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-in", "fade-in", "duration-1000")
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    const elements = heroRef.current?.querySelectorAll(".animate-on-scroll")
-    elements?.forEach((el) => observer.observe(el))
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <section
       ref={heroRef}
@@ -44,23 +26,23 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <div className="space-y-8 lg:space-y-12">
-          <p className="animate-on-scroll opacity-0 text-xs lg:text-sm tracking-[0.3em] uppercase text-muted-foreground">
+          <p className="text-xs lg:text-sm tracking-[0.3em] uppercase text-muted-foreground">
             Since 2015
           </p>
 
-          <h1 className="animate-on-scroll opacity-0 text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-foreground leading-tight text-balance">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-light tracking-tight text-foreground leading-tight text-balance">
             정성이 가득한
             <br />
             <span className="font-medium">신선한 한 끼</span>
           </h1>
 
-          <p className="animate-on-scroll opacity-0 text-base lg:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed font-light">
+          <p className="text-base lg:text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed font-light">
             매일 아침 정성껏 준비하는 건강한 가정식.
             <br className="hidden sm:block" />
             어머니의 손맛을 담아 정직하게 요리합니다.
           </p>
 
-          <div className="animate-on-scroll opacity-0 flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <a
               href="#menu"
               className="px-8 py-4 bg-primary text-primary-foreground text-sm font-medium rounded-full hover:bg-primary/90 transition-all"

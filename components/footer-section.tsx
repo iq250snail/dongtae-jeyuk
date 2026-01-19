@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import { MapPin, Clock, Phone } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
 export function FooterSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -56,9 +58,9 @@ export function FooterSection() {
             </div>
             <h3 className="text-lg font-medium">위치</h3>
             <p className="text-sm text-primary-foreground/70 leading-relaxed font-light">
-              서울특별시 마포구 홍대입구역
+              충북 청주시 흥덕구 강내면
               <br />
-              근처 골목길 123-45
+              태성탑연로 435
             </p>
           </div>
 
@@ -69,9 +71,9 @@ export function FooterSection() {
             </div>
             <h3 className="text-lg font-medium">영업시간</h3>
             <div className="text-sm text-primary-foreground/70 space-y-1 font-light">
-              <p>월 - 금 : 11:00 - 21:00</p>
-              <p>토 - 일 : 11:00 - 22:00</p>
-              <p className="text-primary-foreground/50">브레이크타임 15:00 - 17:00</p>
+              <p>월요일~토요일 : 8:30 - 21:00</p>
+              <p>일,공휴일 : (휴일)</p>
+              <p className="text-primary-foreground/50">브레이크타임 15:00 - 16:00</p>
             </div>
           </div>
 
@@ -82,7 +84,7 @@ export function FooterSection() {
             </div>
             <h3 className="text-lg font-medium">예약 문의</h3>
             <p className="text-sm text-primary-foreground/70 leading-relaxed font-light">
-              02-1234-5678
+              043-236-5802
               <br />
               예약은 전화로만 가능합니다
             </p>
@@ -92,7 +94,25 @@ export function FooterSection() {
         {/* Divider */}
         <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 border-t border-primary-foreground/10 pt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-2xl font-medium tracking-tight">동태랑 제육</p>
+            <p className="text-2xl font-medium tracking-tight">
+              <Link href="/" className="group flex items-center gap-2.5">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="동태랑 제육 로고"
+                  width={36}
+                  height={36}
+                  className="rounded-full"
+                />
+                <div className="flex items-baseline gap-0.5">
+                  <span className="text-xl lg:text-2xl font-bold tracking-tight text-balance">
+                    동태랑
+                  </span>
+                  <span className="text-xl lg:text-2xl font-bold text-accent">
+                    제육
+                  </span>
+                </div>
+              </Link>
+            </p>
             <p className="text-xs text-primary-foreground/50 font-light">
               © 2025 동태랑 제육. All rights reserved.
             </p>
