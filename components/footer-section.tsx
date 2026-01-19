@@ -52,7 +52,7 @@ export function FooterSection() {
         {/* Map and Info Section */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left: Map */}
-          <div className="animate-item rounded-2xl overflow-hidden border border-border hover:shadow-lg transition-shadow duration-500">
+          <div className="animate-item opacity-0 translate-y-4 transition-all duration-500 space-y-3">
             <a
               href="https://map.naver.com/p/search/%EB%8F%99%ED%83%9C%EB%9E%91%EC%A0%9C%EC%9C%A1"
               target="_blank"
