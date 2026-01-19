@@ -59,7 +59,10 @@ export function FooterSection() {
               rel="noopener noreferrer"
               className="block aspect-[4/3] w-full rounded-2xl overflow-hidden border border-primary-foreground/10 hover:opacity-90 transition-opacity cursor-pointer group"
             >
-
+              <img
+                src="/images/location.jpg"
+                alt="[네이버지도] 동태랑 제육"
+              />
             </a>
           </div>
 
