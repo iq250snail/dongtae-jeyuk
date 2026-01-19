@@ -60,7 +60,7 @@ export function FooterSection() {
               className="block aspect-[4/3] w-full rounded-2xl overflow-hidden border border-primary-foreground/10 hover:opacity-90 transition-opacity cursor-pointer group"
             >
               <Image
-                src="/images/location.jRpg"
+                src="/images/location.jpg"
                 alt="[네이버지도] 동태랑 제육"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
